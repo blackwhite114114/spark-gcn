@@ -1,0 +1,49 @@
+# .gitignore for GCN_predict-Pytorch
+# Ignore Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# PyTorch / model artifacts
+*.pth
+*.pt
+*.h5
+
+# Large data files (uncomment if you want to ignore dataset files)
+#PeMS_04/
+#*.npz
+#*.csv
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+tmp/
+*.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.env.*
