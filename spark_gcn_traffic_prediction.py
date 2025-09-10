@@ -68,6 +68,7 @@ def generate_test_data(spark):
     
     # 创建GraphFrame
     graph = None
+    global HAS_GRAPHFRAMES
     if HAS_GRAPHFRAMES:
         try:
             graph = GraphFrame(nodes_df, edges_df)
@@ -290,6 +291,9 @@ def evaluate_prediction(target, prediction):
 def main():
     # 设置Spark
     spark = setup_spark()
+    
+    # 设置检查点目录，用于GraphFrames算法
+    spark.sparkContext.setCheckpointDir("/tmp/spark-checkpoint")
     
     # 生成测试数据
     graph, flow_data = generate_test_data(spark)
