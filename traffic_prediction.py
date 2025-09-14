@@ -43,9 +43,9 @@ def main():
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False, num_workers=32)
 
     # 第二步：定义模型（这里其实只是加载模型，关于模型的定义在下面单独写了，先假设已经写好）
-    # my_net = GCN(in_c=6, hid_c=6, out_c=1)  # 加载GCN模型
+    my_net = GCN(in_c=6, hid_c=6, out_c=1)  # 加载GCN模型
     # my_net = ChebNet(in_c=6, hid_c=6, out_c=1, K=2)   # 加载ChebNet模型
-    my_net = GATNet(in_c=6 * 1, hid_c=6, out_c=1, n_heads=2)  # 加载GAT模型
+    # my_net = GATNet(in_c=6 * 1, hid_c=6, out_c=1, n_heads=2)  # 加载GAT模型
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")  # 定义设备
 

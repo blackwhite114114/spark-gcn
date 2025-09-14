@@ -1,3 +1,17 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2024/6/15
+# @Author  : ChatGPT-4
+# @github  :            
+# spark_gcn_traffic_prediction.py
+# 使用Spark和GraphFrames实现GCN进行交通流预测的示例代码
+# 该代码生成测试数据，构建图神经网络模型，并进行训练和评估
+# 该代码假设GraphFrames已正确安装并配置
+# 运行该代码需要一个支持Spark的环境
+# 注意：GraphFrames的安装和配置可能因环境而异，具体请参考官方文档
+# 该代码仅用于教学和演示目的，实际应用中可能需要更复杂的处理
+# 该代码生成的测试数据是随机的，实际应用中应使用真实的交通流数据和路网结构
+# 该代码的性能和结果可能因环境和数据而异
+# 该代码仅实现了GCN的基本功能，实际应用中可能需要更复杂的图神经网络模型
 import numpy as np
 import pandas as pd
 from pyspark.sql import SparkSession
